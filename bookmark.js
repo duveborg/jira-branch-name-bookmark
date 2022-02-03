@@ -11,6 +11,6 @@
     .replace(/ /g, '-')
     .replace(/[^\w-]+/g, '');
 
-  var branchName = issueId + '-' + sluggifiedTitle;
+  var branchName = sluggifiedTitle.slice(0, 50) + '-' + issueId;
   alert(branchName);
 })();
